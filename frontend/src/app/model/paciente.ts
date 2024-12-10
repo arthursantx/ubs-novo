@@ -1,10 +1,10 @@
 export class Paciente {
     public id: number = 0;
-    public nome: string = "";
+    public nomeCompleto: string = "";
     public cpf: string = "";
     public nomeMae: string = "";
     public nomePai: string = "";
-    public dataNasc = new Date;
+    public dataNascimento = new Date;
     public sexo: string = "";
     public nacionalidade: string = "";
     public municipioNascimento: string = "";

@@ -1,7 +1,62 @@
-<p></p>
-<h4>{{mensagem}}</h4>
-<div *ngFor="let paciente of pacientes">
-    <b>{{paciente.nome}}</b><br>
-    <b>{{paciente.cpf}}</b><br>
-    <b>{{paciente.id}}</b><br><br>
+<div class="container mt-4">
+    <!-- Mensagem principal -->
+    <h4 class="text-center text-success mb-4">{{ mensagem }}</h4>
+
+    <!-- Tabela de pacientes -->
+    <table class="table table-bordered table-hover" style="background-color: #ffffff; border: 1px solid #008000; text-align: center;">
+        <thead style="background-color: #008000; color: #ffffff;">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>ID</th>
+                <th>Data Nascimento</th>
+                <th>Sexo</th>
+                <th>Celular</th>
+                <th>Residencial</th>
+                <th>Comercial</th>
+                <th>E-mail</th>
+                <th>RG</th>
+                <th>Município Nascimento</th>
+                <th>Escolaridade</th>
+                <th>Situação Familiar</th>
+                <th>Vínculo Estabelecido</th>
+                <th>Cadastro Estabelecido</th>
+                <th>Deficiência</th>
+                <th>Tipo de Deficiência</th>
+                <th>Raça/Cor</th>
+                <th>Nome da Mãe</th>
+                <th>Nome do Pai</th>
+                <th>Frequenta Escola</th>
+                <th>Nacionalidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let paciente of pacientes" style="color: #008000;" 
+                onmouseover="this.style.backgroundColor='#e0f7fa'" 
+                onmouseout="this.style.backgroundColor='#ffffff'">
+                <td>{{ paciente.nomeCompleto }}</td>
+                <td>{{ paciente.cpf }}</td>
+                <td>{{ paciente.id }}</td>
+                <td>{{ paciente.dataNascimento }}</td>
+                <td>{{ paciente.sexo }}</td>
+                <td>{{ paciente.contatoCelular }}</td>
+                <td>{{ paciente.contatoResidencial }}</td>
+                <td>{{ paciente.contatoComercial }}</td>
+                <td>{{ paciente.contatoEmail }}</td>
+                <td>{{ paciente.rg }}</td>
+                <td>{{ paciente.municipioNascimento }}</td>
+                <td>{{ paciente.escolaridade }}</td>
+                <td>{{ paciente.situacaoFamiliar }}</td>
+                <td>{{ paciente.vinculoEstabelecido }}</td>
+                <td>{{ paciente.cadastroEstabelecido }}</td>
+                <td>{{ paciente.deficiencia }}</td>
+                <td>{{ paciente.tipoDeficiencia }}</td>
+                <td>{{ paciente.racaCor }}</td>
+                <td>{{ paciente.nomeMae }}</td>
+                <td>{{ paciente.nomePai }}</td>
+                <td>{{ paciente.frequentaEscola }}</td>
+                <td>{{ paciente.nacionalidade }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
